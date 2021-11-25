@@ -26,18 +26,10 @@ import numpy as np
 import math
 import seaborn as sb
 
-
-# In[2]:
-
+ 
 
 
-
-
-
-# In[10]:
-
-
-def build_kmers(sequence, ksize):
+def build_kmers(sequence, ksize): # found online - used
     kmers = []
     n_kmers = len(sequence) - ksize + 1
 
@@ -52,15 +44,10 @@ k = 3
 
 ##try k = 3
 ##k = 18 onwards is useless
-
-
-
-
-
-# In[12]:
+ 
 
 G = []
-inputFasta = 'sample.fasta'
+inputFasta = 'data/sample.fasta'
 ffile = SeqIO.parse(inputFasta, 'fasta')
 # iterate through each sequence in the fasta file
 for seq_record in ffile:
@@ -71,30 +58,12 @@ for seq_record in ffile:
     covid = build_kmers(seq,k)
     G.append('{},{}'.format(id_name, covid))
 
-
-# In[ ]:
-
-
-
-
-
-# In[2]:
-
+ 
 
 # perform PCA analysis
 df = pd.DataFrame(G)
 print (df)
 df.to_csv("Genome_3mer.csv")
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
+ 
 
 

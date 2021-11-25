@@ -35,11 +35,11 @@ def normKmers(kdict):
     return(norm)
 
 # create all possible kmers for a given length of k
-k = 3
+k = 7
 kmers = createKmers('ACGT', k)
 
 # input fasta containing all sequences to be analysed
-inputFasta = 'sample.fasta'
+inputFasta = 'data/sample.fasta'
 
 # this dictionary will contain the kmer counts for each sequence
 kmerCounts = dict()
@@ -60,5 +60,10 @@ kmerNorm
 #df = pd.DataFrame.from_dict(kmerCounts, orient='index', columns=kmers)
 #dfnorm = pd.DataFrame.from_dict(kmerNorm, orient='index', columns=kmers)
 dfnorm = pd.DataFrame.from_dict(kmerNorm, orient = 'index',columns = kmers)
-dfnorm
+
+print(dfnorm)
+
+
+dfnorm.to_csv("Genome_mer_laurence"+"k"+".csv")
+ 
 
