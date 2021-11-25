@@ -35,7 +35,7 @@ def normKmers(kdict):
     return(norm)
 
 # create all possible kmers for a given length of k
-k = 7
+k = 10
 kmers = createKmers('ACGT', k)
 
 # input fasta containing all sequences to be analysed
