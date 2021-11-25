@@ -138,7 +138,7 @@ def kmer_ming(k,ffile):
 # create all possible kmers for a given length of k
 k = 3
 
-method = 2  # 
+method = 1  # 
 kmers = createKmers('ACGT', k)
 
 # input fasta containing all sequences to be analysed
@@ -156,13 +156,13 @@ if method == 1: #laurence
 
     print(dfnorm)
 
-    dfnorm.to_csv("k-mer"+str(k)+".csv")
+    dfnorm.to_csv("k-mer-lau"+str(k)+".csv")
 
 
 if method == 2: #ming
     kmer_df = kmer_ming(k,ffile)
     
-    kmer_df.to_csv("k-mer"+str(k)+".csv")
+    kmer_df.to_csv("k-mer-ming"+str(k)+".csv")
 
 
 
