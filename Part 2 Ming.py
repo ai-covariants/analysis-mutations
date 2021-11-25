@@ -116,7 +116,7 @@ freq_df
 
 
 ##sum needs to be greater than the number of rows
-freq_df = freq_df[freq_df.columns[freq_df.sum()>182]]
+freq_df = freq_df[freq_df.columns[freq_df.sum()> freq_df.shape[0]]]
 freq_df
 
 
@@ -158,6 +158,12 @@ df
 
 
 # In[18]:
+
+
+
+
+
+# In[19]:
 
 
 # perform PCA analysis
