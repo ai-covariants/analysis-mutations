@@ -47,6 +47,8 @@ def kmer_laurence(k,ffile):
         # count the occurance of each kmer and store in the dictionary
         kmerCounts[id] = countKmers(str(seq_record.seq), kmers)
 
+        print(seq_record, ' seq_record')
+
     kmerNorm = normKmers(kmerCounts)
 
     return kmerNorm
@@ -136,7 +138,7 @@ def kmer_ming(k,ffile):
 
 
 # create all possible kmers for a given length of k
-k = 3
+k = 7
 
 method = 1  # 
 kmers = createKmers('ACGT', k)
