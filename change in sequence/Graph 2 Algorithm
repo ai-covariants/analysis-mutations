@@ -1,0 +1,256 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+from pysam import FastaFile
+import pandas as pd
+##key in the file name 
+
+
+# In[2]:
+
+
+##similarly for mers
+fasta_mers = "genomic.fna"
+mers = FastaFile(fasta_mers)
+##randomly choose one from the fai file created
+first_mers = mers['JX869059.2']
+first_mers
+
+
+# In[3]:
+
+
+len(first_mers)
+
+
+# In[4]:
+
+
+first_mers[2000]
+
+
+# In[5]:
+
+
+first_mers[3000]
+
+
+# In[6]:
+
+
+first_mers[4000]
+
+
+# In[7]:
+
+
+first_mers[5000]
+
+
+# In[8]:
+
+
+first_mers[6000]
+
+
+# In[9]:
+
+
+first_mers[7000]
+
+
+# In[10]:
+
+
+first_mers[8000]
+
+
+# In[11]:
+
+
+first_mers[9000]
+
+
+# In[12]:
+
+
+def second_sequence(first_mers,n):
+    second_mers = first_mers
+    for sequence in second_mers[n]:
+        if sequence == 'A':
+             second_mers = second_mers.replace(sequence,'G')
+        elif sequence =='G':
+            second_mers = second_mers.replace(sequence,'A')
+        elif sequence =='C':
+            second_mers = second_mers.replace(sequence,'T')
+        else:
+            second_mers = second_mers.replace(sequence,'C')
+    return second_mers
+        
+
+second_mers = second_sequence(first_mers,2000)
+second_mers[2000]
+
+
+# In[14]:
+
+
+def third_sequence(first_mers,n):
+    third_mers = first_mers
+    for sequence in first_mers[n]:
+        if sequence == 'A':
+             third_mers = third_mers.replace(sequence,'G')
+        elif sequence =='G':
+            third_mers = third_mers.replace(sequence,'A')
+        elif sequence =='C':
+            third_mers = third_mers.replace(sequence,'T')
+        else:
+            third_mers = third_mers.replace(sequence,'C')
+         
+    return third_mers
+        
+
+third_mers = third_sequence(first_mers,3000)
+third_mers[3000]
+
+
+# In[15]:
+
+
+def fourth_sequence(first_mers,n):
+    fourth_mers = first_mers
+    for sequence in fourth_mers[n]:
+        if sequence == 'A':
+            fourth_mers = fourth_mers.replace(sequence,'G')
+        elif sequence =='G':
+            fourth_mers = fourth_mers.replace(sequence,'A')
+        elif sequence =='C':
+            fourth_mers = fourth_mers.replace(sequence,'T')
+        else:
+            fourth_mers = fourth_mers.replace(sequence,'C')
+         
+    return fourth_mers
+        
+
+fourth_mers = fourth_sequence(first_mers,4000)
+fourth_mers[4000]
+
+
+# In[16]:
+
+
+def fifth_sequence(first_mers,n):
+    fifth_mers = first_mers
+    for sequence in fifth_mers[n]:
+        if sequence == 'A':
+            fifth_mers = fifth_mers.replace(sequence,'G')
+        elif sequence =='G':
+            fifth_mers = fifth_mers.replace(sequence,'A')
+        elif sequence =='C':
+            fifth_mers = fifth_mers.replace(sequence,'T')
+        else:
+            fifth_mers = fifth_mers.replace(sequence,'C')
+            
+    return fifth_mers
+        
+
+fifth_mers = fifth_sequence(first_mers, 5000)    
+fifth_mers[5000]
+
+
+# In[17]:
+
+
+def sixth_sequence(first_mers,n):
+    sixth_mers = first_mers
+    for sequence in sixth_mers[n]:
+        if sequence == 'A':
+            sixth_mers = sixth_mers.replace(sequence,'G')
+        elif sequence =='G':
+            sixth_mers = sixth_mers.replace(sequence,'A')
+        elif sequence =='C':
+            sixth_mers = sixth_mers.replace(sequence,'T')
+        else:
+            sixth_mers = sixth_mers.replace(sequence,'C')
+            
+    return sixth_mers
+        
+
+sixth_mers = sixth_sequence(first_mers, 6000)    
+sixth_mers[6000]
+
+
+# In[18]:
+
+
+def seventh_sequence(first_mers,n):
+    seventh_mers = first_mers
+    for sequence in seventh_mers[n]:
+        if sequence == 'A':
+            seventh_mers = seventh_mers.replace(sequence,'G')
+        elif sequence =='G':
+            seventh_mers = seventh_mers.replace(sequence,'A')
+        elif sequence =='C':
+            seventh_mers = seventh_mers.replace(sequence,'T')
+        else:
+            seventh_mers = seventh_mers.replace(sequence,'C')
+            
+    return seventh_mers
+        
+
+seventh_mers = seventh_sequence(first_mers, 7000)    
+seventh_mers[7000]
+
+
+# In[19]:
+
+
+def eigth_sequence(first_mers,n):
+    eigth_mers = first_mers
+    for sequence in eigth_mers[n]:
+        if sequence == 'A':
+            eigth_mers = eigth_mers.replace(sequence,'G')
+        elif sequence =='G':
+            eigth_mers = eigth_mers.replace(sequence,'A')
+        elif sequence =='C':
+            eigth_mers = eigth_mers.replace(sequence,'T')
+        else:
+            eigth_mers = eigth_mers.replace(sequence,'C')
+            
+    return eigth_mers
+        
+
+eigth_mers = eigth_sequence(first_mers, 8000)    
+eigth_mers[8000]
+
+
+# In[20]:
+
+
+def ninth_sequence(first_mers,n):
+    ninth_mers = first_mers
+    for sequence in ninth_mers[n]:
+        if sequence == 'A':
+            ninth_mers = ninth_mers.replace(sequence,'G')
+        elif sequence =='G':
+            ninth_mers = ninth_mers.replace(sequence,'A')
+        elif sequence =='C':
+            ninth_mers = ninth_mers.replace(sequence,'T')
+        else:
+            ninth_mers = ninth_mers.replace(sequence,'C')
+            
+    return ninth_mers
+        
+ninth_mers = ninth_sequence(first_mers, 9000)
+ninth_mers[9000]
+
+
+# In[ ]:
+
+
+
+
+
