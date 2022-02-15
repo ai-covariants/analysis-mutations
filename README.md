@@ -3,7 +3,8 @@ Analysis of mutations during COVID-19 using unsupervised machine learning
 
 
 
-### Thesis
+## Thesis
+### Code
 
 1. Discussion Code.R
 
@@ -21,7 +22,7 @@ Complete codes for mutation of an entire MERS-CoV sequence
 
 In this section, Principal Component Analysis,t-SNE and UMAP are used to reduce the dimensions while retaining most information of the datasets. Subsequently, the visualization is produced to examine the relationship between various isolates.
 
-## Results
+### Results
 
 1. Discussion 
 
