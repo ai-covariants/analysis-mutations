@@ -20,3 +20,7 @@ Complete codes for mutation of an entire MERS-CoV sequence
 4. Discussion II.py
 
 In this section, Principal Component Analysis is used to reduce the dimensions while retaining most information of the datasets. Subsequently, the visualization is produced to examine the relationship between various isolates.
+
+5. Discussion TSNE.py
+
+T-SNE is used to analye and annotate the dataset while producing dimensional reduction.
