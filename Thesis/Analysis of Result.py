@@ -163,7 +163,6 @@ plt.figure(figsize=(100,100))
 plt.scatter(X_to, Y_to,s=1000,color="orange")
 plt.xlabel("Principal Component 1")
 plt.ylabel("Principal Component 2")
-#plt.title("Graph 3 - 8 MERS sequence with 10 changes each; Spread 11.5 x 10",fontsize=8)
 for i, label in enumerate(annotations):
     plt.annotate(label, (X_to[i], Y_to[i]), fontsize = 50,ha='left',
             va='baseline')
