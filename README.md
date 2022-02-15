@@ -17,6 +17,6 @@ The codes above serve as a template which other users can use to mutate the sequ
 
 Complete codes for mutation of an entire MERS-CoV sequence
 
-4. Discussion II
+4. Discussion II.py
 
 In this section, Principal Component Analysis is used to reduce the dimensions while retaining most information of the datasets. Subsequently, the visualization is produced to examine the relationship between various isolates.
