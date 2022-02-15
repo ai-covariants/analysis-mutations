@@ -17,3 +17,20 @@ Complete codes for mutation of an entire MERS-CoV sequence
 
 In this section, Principal Component Analysis,t-SNE and UMAP are used to reduce the dimensions while retaining most information of the datasets. Subsequently, the visualization is produced to examine the relationship between various isolates.
 
+## Results
+
+1. Discussion 
+
+This folder consists of dimensional reduction result generated from Discussion.py
+
+2. PCA for Mutation
+
+This folder includes Principal Component Analysis i.e.,dimensional reduction results using dataset from Mutation of Sequences
+
+3. T-SNE for Mutation
+
+This folder comprises of t-SNE dimensional reduction approach using dataset from Mutation of Sequences
+
+4. UMAP for Mutation
+
+This folder contains UMAP, a novel dimensional reduction method, using dataset from Mutation of Sequence
