@@ -120,6 +120,7 @@ def change(first_mers,x):
                 else:
                     mers_new = mers_new[0:n]+'C'+mers_new[n+1:]  
             print(n, mers_new[n:n+900:100])
+            print(mers_new,  file=open('mutation'+str(n)+'txt', 'w'))
             n += 1000
     else:
         while n < 10000:
