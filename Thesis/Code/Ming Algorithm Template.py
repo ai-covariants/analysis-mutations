@@ -136,8 +136,6 @@ def change(first_mers,x):
                         mers_new = mers_new[0:x]+'C'+mers_new[x+1:]  
             print(n, mers_new[n:n+900:100])
             print(mers_new,  file=open('mutation'+str(n)+'txt', 'w'))
-            #df = pd.DataFrame(mers_new)
-            #df.to_csv("ming_algorithm"+str(n)+".csv")
             n += 1000
             
             
