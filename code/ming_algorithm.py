@@ -28,7 +28,7 @@ len(first_sequence)
 
 
 ##data cleaning to remove letter N
-##please ensure only ACGT are presemy
+##please ensure only ACGT are present
 first_sequence = first_sequence.replace("N","")
 
 
