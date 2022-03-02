@@ -135,7 +135,7 @@ def kmer_ming(k,ffile):
 
 
 # create all possible kmers for a given length of k
-k = 9
+k = 3
 
 method = 2  # 
 kmers = createKmers('ACGT', k)
