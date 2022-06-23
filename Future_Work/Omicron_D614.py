@@ -37,21 +37,12 @@ def pca(data):
                , c = color
                , s = 40)
     ax.legend(targets)
-    plt.savefig('PCA.png')
+    plt.savefig('PCA3.png')
     
     
 
 data = pd.read_csv('selected_covid_data.csv')
 pca(data)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 
