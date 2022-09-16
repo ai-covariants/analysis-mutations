@@ -52,10 +52,10 @@ dendrogram_create = function(filePath)
                  aes(x=x, y=y.x, xend=xend, yend=yend, color = target, text = paste('sample name: ', sample_name,
                                                                                       '<br>',
                                                                                       'Target: ', target))) + # test aes is for plotly
-    scale_color_manual(values = variant_color) + scale_y_reverse() + coord_flip() + theme_bw() + theme(legend.position = 'right') + ylab('Distance') + xlab('Sequence') + ggtitle('COVID dendrogram')
+    scale_color_manual(values = variant_color) + #scale_y_reverse() + coord_flip()  
+    theme_bw() + theme(legend.position = 'right') + ylab('Distance') + xlab('Sequence') + ggtitle('COVID dendrogram')
   
-  p
-
+  ggplotly(p)
 }
 
 dendrogram_create('covid_kmer_new_3.csv')

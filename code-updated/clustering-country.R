@@ -66,13 +66,14 @@ dendrogram_create = function(filePath,image_name)
                  aes(x=x, y=y.x, xend=xend, yend=yend, color = Country, text = paste('sample name: ', sample_name,
                                                                                     '<br>',
                                                                                     'Country: ', Country))) + # test aes is for plotly
-    scale_color_manual(values = var_color) + scale_y_reverse() + coord_flip() + theme_bw() + theme(legend.position = 'right') + ylab('Distance') + xlab('Sequence') + ggtitle(image_name)
+    scale_color_manual(values = var_color) + #scale_y_reverse() + coord_flip() + 
+    theme_bw() + theme(legend.position = 'right') + ylab('Distance') + xlab('Sequence') + ggtitle(image_name)
   
-  p
+  ggplotly(p)
 }
 
-dendrogram_create('alpha.csv','Alpha country-wise cluster')
-dendrogram_create('beta.csv','Beta country-wise cluster')
-dendrogram_create('gamma.csv','Gamma country-wise cluster')
+#dendrogram_create('alpha.csv','Alpha country-wise cluster')
+#dendrogram_create('beta.csv','Beta country-wise cluster')
+#dendrogram_create('gamma.csv','Gamma country-wise cluster')
 dendrogram_create('delta.csv','Delta country-wise cluster')
 dendrogram_create('omicron.csv','Omicron country-wise cluster')
