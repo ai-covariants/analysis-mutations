@@ -3,6 +3,7 @@ library(ggdendro)
 library(RColorBrewer)
 library(plotly)
 library(readr)
+library(cluster)
 
 #set the working directory 
 setwd("/Users/chaarvibansal/Desktop/analysis-mutations/data-updated")
@@ -27,9 +28,9 @@ dendrogram_create = function(filePath)
     pivot_wider(names_from = 'type', values_from = 'value_norm') %>%
     column_to_rownames('sample_name')
   
-  # create dendrogram from distance matrix of normalized data
-  dist_matrix <- dist(numeric_data_norm, method = 'euclidean')
-  dendrogram <- as.dendrogram(hclust(dist_matrix, method = 'complete'))
+  # create dendrogram from AGNES
+  model <- agnes(numeric_data_norm, metric = "euclidean")
+  dendrogram <- as.dendrogram(model)
   
   # extract dendrogram segment data
   dendrogram_data <- dendro_data(dendrogram)
@@ -52,9 +53,8 @@ dendrogram_create = function(filePath)
                  aes(x=x, y=y.x, xend=xend, yend=yend, color = target, text = paste('sample name: ', sample_name,
                                                                                       '<br>',
                                                                                       'Target: ', target))) + # test aes is for plotly
-    scale_color_manual(values = variant_color) + #scale_y_reverse() + coord_flip()  
-    theme_bw() + theme(legend.position = 'right') + ylab('Distance') + xlab('Sequence') + ggtitle('COVID dendrogram')
-  
+    scale_color_manual(values = variant_color) + #scale_y_reverse() + coord_flip() +
+    theme_bw() + theme(legend.position = 'right') + ylab('Distance') + xlab('Sequence') 
   ggplotly(p)
 }
 
