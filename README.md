@@ -1,15 +1,11 @@
 # analysis-mutations
 Analysis of mutations during COVID-19 using unsupervised machine learning 
 
-
-
-## Thesis
-
-### Data 
+## Data 
 
 Data for different variants (250 sequences in total) was downloaded from GISAID (global initiative on sharing Avian influenza data). Please contact the authors for the dataset. 
 
-### Code
+## Code
 
 1. kmer-analysis-using-R.R: This R script is used to generate kmers of a specified length from the given FASTA file. Change the value of k as per requirement. This script accepts as input a FASTA file and outputs a csv file with kmer count for all possible kmers. 
 
@@ -19,7 +15,7 @@ Data for different variants (250 sequences in total) was downloaded from GISAID 
 
 4. clustering-country.R & clustering-variant.R: These scripts have been used to plot dendrograms after applying hierarchial clustering on the processed kmer data for k=3. (Reference - https://towardsdatascience.com/custom-coloring-dendrogram-ends-in-r-f1fa45e5077a)
 
-### Results
+## Results
 
 1. results-PCA: This folder includes Principal Component Analysis i.e.,dimensional reduction results using dataset from GISAID.
 
